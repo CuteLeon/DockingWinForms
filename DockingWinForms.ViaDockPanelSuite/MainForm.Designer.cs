@@ -28,13 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.DemoDockPanel = new WeifenLuo.WinFormsUI.Docking.DockPanel();
+            this.SuspendLayout();
+            // 
+            // DemoDockPanel
+            // 
+            this.DemoDockPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DemoDockPanel.Location = new System.Drawing.Point(0, 0);
+            this.DemoDockPanel.Name = "DemoDockPanel";
+            this.DemoDockPanel.Size = new System.Drawing.Size(800, 450);
+            this.DemoDockPanel.TabIndex = 0;
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DemoDockPanel);
+            this.Name = "MainForm";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private WeifenLuo.WinFormsUI.Docking.DockPanel DemoDockPanel;
     }
 }
 
