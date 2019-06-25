@@ -49,6 +49,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.darkGroupBox1);
+            this.DefaultDockArea = DarkUI.Docking.DarkDockArea.Bottom;
             this.DockText = "啦啦啦啦";
             this.Name = "DockBottom";
             this.Size = new System.Drawing.Size(497, 235);
