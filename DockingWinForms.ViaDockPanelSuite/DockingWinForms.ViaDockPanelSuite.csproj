@@ -64,6 +64,12 @@
     <Compile Include="Docks\DockForm2.Designer.cs">
       <DependentUpon>DockForm2.cs</DependentUpon>
     </Compile>
+    <Compile Include="FloatedWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FloatedWindow.Designer.cs">
+      <DependentUpon>FloatedWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
