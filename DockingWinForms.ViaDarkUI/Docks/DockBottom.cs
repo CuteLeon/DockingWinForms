@@ -6,10 +6,10 @@ namespace DockingWinForms.ViaDarkUI.Docks
     {
         public DockBottom()
         {
-            InitializeComponent();
+            this.InitializeComponent();
 
             this.DockText = "记得赋值 DockText";
-            DockArea = DarkDockArea.Bottom;
+            this.DockArea = DarkDockArea.Bottom;
         }
     }
 }
