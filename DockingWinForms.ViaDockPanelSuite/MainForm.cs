@@ -91,11 +91,22 @@ namespace DockingWinForms.ViaDockPanelSuite
                     ToolTipText = $"Tool Tip Text - {index}",
 
                     DockAreas = DockAreas.Document | DockAreas.Float,
+
+                    TabPageContextMenuStrip = form1.TabPageContextMenuStrip,
                 };
 
                 // 显示
                 document.Show(this.DemoDockPanel, DockState.Document);
             });
+
+            // 激活被隐藏的 AutoHide 窗口
+            form1.DockState = DockState.DockLeftAutoHide;
+            this.DemoDockPanel.ActiveAutoHideContent = form1;
+            // 隐藏被激活的 AutoHide 窗口 (双击被激活的 AutoHide 窗口即可)
+            this.DemoDockPanel.ActiveAutoHideContent = null;
+            
+            // 移除停靠内容
+            form1.DockHandler.DockPanel = null;
         }
     }
 }
