@@ -35,6 +35,7 @@ namespace DockingWinForms.ViaDarkUI
             Application.AddMessageFilter(this.DemoDockPanel.DockResizeFilter);
 
             this.DemoDockPanel.AddContent(this.dock1);
+            // DockPanel.AddContent(, DockGroup) 合并子容器
             this.DemoDockPanel.AddContent(this.dock2, this.dock1.DockGroup);
             this.DemoDockPanel.AddContent(this.dock3);
             this.DemoDockPanel.AddContent(this.dock4);
