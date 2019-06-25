@@ -36,14 +36,11 @@
             this.工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DemoToolStrip = new DarkUI.Controls.DarkToolStrip();
-            this.DemoStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.DemoStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.DemoStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.DemoStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.DemoStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.DemoStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.DemoStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DemoStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.DemoStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.DemoStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.DemoStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
@@ -53,15 +50,18 @@
             this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.DemoStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.DemoStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.DemoStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.DemoStatusStrip = new DarkUI.Controls.DarkStatusStrip();
             this.toolStripProgressBar2 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox3 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.DemoDockPanel = new DarkUI.Docking.DarkDockPanel();
             this.DemoMenuStrip.SuspendLayout();
             this.DemoToolStrip.SuspendLayout();
@@ -97,7 +97,7 @@
             // 
             this.新建文档ToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.新建文档ToolStripMenuItem.Name = "新建文档ToolStripMenuItem";
-            this.新建文档ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.新建文档ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.新建文档ToolStripMenuItem.Text = "新建文档";
             this.新建文档ToolStripMenuItem.Click += new System.EventHandler(this.新建文档ToolStripMenuItem_Click);
             // 
@@ -105,7 +105,7 @@
             // 
             this.退出ToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -126,6 +126,7 @@
             // DemoToolStrip
             // 
             this.DemoToolStrip.AllowItemReorder = true;
+            this.DemoToolStrip.AutoSize = false;
             this.DemoToolStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.DemoToolStrip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.DemoToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -146,6 +147,13 @@
             this.DemoToolStrip.TabIndex = 1;
             this.DemoToolStrip.Text = "darkToolStrip1";
             // 
+            // DemoStripLabel1
+            // 
+            this.DemoStripLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.DemoStripLabel1.Name = "DemoStripLabel1";
+            this.DemoStripLabel1.Size = new System.Drawing.Size(35, 22);
+            this.DemoStripLabel1.Text = "按钮:";
+            // 
             // DemoStripButton1
             // 
             this.DemoStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -155,13 +163,6 @@
             this.DemoStripButton1.Name = "DemoStripButton1";
             this.DemoStripButton1.Size = new System.Drawing.Size(23, 22);
             this.DemoStripButton1.Text = "Button";
-            // 
-            // DemoStripLabel1
-            // 
-            this.DemoStripLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.DemoStripLabel1.Name = "DemoStripLabel1";
-            this.DemoStripLabel1.Size = new System.Drawing.Size(35, 22);
-            this.DemoStripLabel1.Text = "按钮:";
             // 
             // DemoStripButton2
             // 
@@ -174,16 +175,6 @@
             this.DemoStripButton2.Size = new System.Drawing.Size(23, 22);
             this.DemoStripButton2.Text = "Button";
             // 
-            // DemoStripButton3
-            // 
-            this.DemoStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.DemoStripButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.DemoStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("DemoStripButton3.Image")));
-            this.DemoStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.DemoStripButton3.Name = "DemoStripButton3";
-            this.DemoStripButton3.Size = new System.Drawing.Size(50, 22);
-            this.DemoStripButton3.Text = "Button";
-            // 
             // DemoStripButton4
             // 
             this.DemoStripButton4.CheckOnClick = true;
@@ -194,35 +185,15 @@
             this.DemoStripButton4.Size = new System.Drawing.Size(66, 22);
             this.DemoStripButton4.Text = "Button";
             // 
-            // DemoStripMenuItem1
+            // DemoStripButton3
             // 
-            this.DemoStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.DemoStripMenuItem1.Name = "DemoStripMenuItem1";
-            this.DemoStripMenuItem1.Size = new System.Drawing.Size(181, 22);
-            this.DemoStripMenuItem1.Text = "菜单1";
-            // 
-            // DemoStripMenuItem2
-            // 
-            this.DemoStripMenuItem2.CheckOnClick = true;
-            this.DemoStripMenuItem2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.DemoStripMenuItem2.Name = "DemoStripMenuItem2";
-            this.DemoStripMenuItem2.Size = new System.Drawing.Size(181, 22);
-            this.DemoStripMenuItem2.Text = "菜单2";
-            // 
-            // DemoStripComboBox1
-            // 
-            this.DemoStripComboBox1.AutoCompleteCustomSource.AddRange(new string[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
-            this.DemoStripComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.DemoStripComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.DemoStripComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.DemoStripComboBox1.Name = "DemoStripComboBox1";
-            this.DemoStripComboBox1.Size = new System.Drawing.Size(121, 25);
+            this.DemoStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.DemoStripButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.DemoStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("DemoStripButton3.Image")));
+            this.DemoStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.DemoStripButton3.Name = "DemoStripButton3";
+            this.DemoStripButton3.Size = new System.Drawing.Size(50, 22);
+            this.DemoStripButton3.Text = "Button";
             // 
             // DemoStripDropDownButton1
             // 
@@ -260,6 +231,7 @@
             // 
             // toolStripTextBox1
             // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.toolStripTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
@@ -279,6 +251,7 @@
             // 
             // toolStripTextBox2
             // 
+            this.toolStripTextBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.toolStripTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(100, 25);
@@ -288,6 +261,36 @@
             this.toolStripProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 22);
+            // 
+            // DemoStripMenuItem1
+            // 
+            this.DemoStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.DemoStripMenuItem1.Name = "DemoStripMenuItem1";
+            this.DemoStripMenuItem1.Size = new System.Drawing.Size(181, 22);
+            this.DemoStripMenuItem1.Text = "菜单1";
+            // 
+            // DemoStripMenuItem2
+            // 
+            this.DemoStripMenuItem2.CheckOnClick = true;
+            this.DemoStripMenuItem2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.DemoStripMenuItem2.Name = "DemoStripMenuItem2";
+            this.DemoStripMenuItem2.Size = new System.Drawing.Size(181, 22);
+            this.DemoStripMenuItem2.Text = "菜单2";
+            // 
+            // DemoStripComboBox1
+            // 
+            this.DemoStripComboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.DemoStripComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.DemoStripComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.DemoStripComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.DemoStripComboBox1.Name = "DemoStripComboBox1";
+            this.DemoStripComboBox1.Size = new System.Drawing.Size(121, 25);
             // 
             // DemoStatusStrip
             // 
@@ -332,15 +335,6 @@
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 20);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
-            // toolStripSplitButton1
-            // 
-            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(32, 20);
-            this.toolStripSplitButton1.Text = "toolStripSplitButton1";
-            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
@@ -359,8 +353,18 @@
             // 
             // toolStripTextBox3
             // 
+            this.toolStripTextBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.toolStripTextBox3.Name = "toolStripTextBox3";
             this.toolStripTextBox3.Size = new System.Drawing.Size(100, 23);
+            // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(32, 20);
+            this.toolStripSplitButton1.Text = "toolStripSplitButton1";
             // 
             // DemoDockPanel
             // 
