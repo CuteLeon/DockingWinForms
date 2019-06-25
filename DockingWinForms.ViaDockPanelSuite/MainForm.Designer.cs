@@ -45,6 +45,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.DemoDockPanel);
+            this.IsMdiContainer = true;
             this.Name = "MainForm";
             this.Text = "Form1";
             this.ResumeLayout(false);

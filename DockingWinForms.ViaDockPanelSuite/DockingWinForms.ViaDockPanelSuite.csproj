@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Docks\DockDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docks\DockDocument.Designer.cs">
+      <DependentUpon>DockDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docks\DockForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docks\DockForm1.Designer.cs">
+      <DependentUpon>DockForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Docks\DockForm1.resx">
+      <DependentUpon>DockForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
