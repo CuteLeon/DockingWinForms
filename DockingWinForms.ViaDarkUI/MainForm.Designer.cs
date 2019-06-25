@@ -62,6 +62,7 @@
             this.toolStripComboBox3 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
+            this.DemoDockPanel = new DarkUI.Docking.DarkDockPanel();
             this.DemoMenuStrip.SuspendLayout();
             this.DemoToolStrip.SuspendLayout();
             this.DemoStatusStrip.SuspendLayout();
@@ -361,11 +362,21 @@
             this.toolStripTextBox3.Name = "toolStripTextBox3";
             this.toolStripTextBox3.Size = new System.Drawing.Size(100, 23);
             // 
+            // DemoDockPanel
+            // 
+            this.DemoDockPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.DemoDockPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DemoDockPanel.Location = new System.Drawing.Point(0, 50);
+            this.DemoDockPanel.Name = "DemoDockPanel";
+            this.DemoDockPanel.Size = new System.Drawing.Size(800, 370);
+            this.DemoDockPanel.TabIndex = 3;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DemoDockPanel);
             this.Controls.Add(this.DemoStatusStrip);
             this.Controls.Add(this.DemoToolStrip);
             this.Controls.Add(this.DemoMenuStrip);
@@ -418,6 +429,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox3;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
+        private DarkUI.Docking.DarkDockPanel DemoDockPanel;
     }
 }
 
