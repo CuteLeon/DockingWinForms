@@ -64,7 +64,10 @@ namespace DockingWinForms.ViaDarkUI
 
             // 使用字典维护 Dock 控件和序列化 Key 的关系，还原布局时，需要传入一个根据 Key， 返回对应 Dock 控件的委托；
             var dictionary = new Dictionary<string, DarkDockContent>();
-            this.DemoDockPanel.RestoreDockPanelState(state, (key) => dictionary[key]);
+            if (dictionary.Count > 0)
+            {
+                this.DemoDockPanel.RestoreDockPanelState(state, (key) => dictionary[key]);
+            }
         }
 
         private void Button_MouseClick(object sender, MouseEventArgs e)
