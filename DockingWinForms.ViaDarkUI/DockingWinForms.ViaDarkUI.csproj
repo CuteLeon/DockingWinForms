@@ -52,11 +52,23 @@
     <Compile Include="Docks\DockBottom.Designer.cs">
       <DependentUpon>DockBottom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Docks\DockDocument.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Docks\DockDocument.Designer.cs">
+      <DependentUpon>DockDocument.cs</DependentUpon>
+    </Compile>
     <Compile Include="Docks\DockLeft.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Docks\DockLeft.Designer.cs">
       <DependentUpon>DockLeft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docks\DockRight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Docks\DockRight.Designer.cs">
+      <DependentUpon>DockRight.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -69,8 +81,14 @@
     <EmbeddedResource Include="Docks\DockBottom.resx">
       <DependentUpon>DockBottom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Docks\DockDocument.resx">
+      <DependentUpon>DockDocument.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Docks\DockLeft.resx">
       <DependentUpon>DockLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docks\DockRight.resx">
+      <DependentUpon>DockRight.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
