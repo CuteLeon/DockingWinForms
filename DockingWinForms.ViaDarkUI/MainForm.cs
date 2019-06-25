@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Linq;
+using System.Windows.Forms;
 using DarkUI.Controls;
 using DarkUI.Docking;
 using DarkUI.Forms;
@@ -21,7 +22,6 @@ namespace DockingWinForms.ViaDarkUI
         DockDocument dock11 = new DockDocument();
         DockDocument dock12 = new DockDocument();
         DockDocument dock13 = new DockDocument();
-        DockDocument dock14 = new DockDocument();
 
         public MainForm()
         {
@@ -44,9 +44,20 @@ namespace DockingWinForms.ViaDarkUI
             this.DemoDockPanel.AddContent(this.dock11);
             this.DemoDockPanel.AddContent(this.dock12);
             this.DemoDockPanel.AddContent(this.dock13);
-            this.dock13.Controls.Clear();
-            this.dock13.Padding = new Padding(30);
-            this.dock13.Controls.Add(new DarkButton() { Dock = DockStyle.Fill, Text = "Button" });
+
+            DarkDocument document = new DarkDocument() { DockText = "测试" };
+            DarkButton button = new DarkButton() { Dock = DockStyle.Fill, Text = "Button" };
+            document.Padding = new Padding(30);
+            document.Controls.Add(button);
+            button.MouseClick += this.Button_MouseClick;
+            this.DemoDockPanel.AddContent(document);
+        }
+
+        private void Button_MouseClick(object sender, MouseEventArgs e)
+        {
+            DarkMessageBox.ShowInformation(
+                string.Join("、", this.DemoDockPanel.GetDocuments().Select(doc => doc.DockText)),
+                "已打开文档：");
         }
 
         private void 退出ToolStripMenuItem_Click(object sender, System.EventArgs e)
