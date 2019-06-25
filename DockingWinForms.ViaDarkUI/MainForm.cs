@@ -1,4 +1,5 @@
-﻿using DarkUI.Forms;
+﻿using System.Windows.Forms;
+using DarkUI.Forms;
 
 namespace DockingWinForms.ViaDarkUI
 {
@@ -7,6 +8,11 @@ namespace DockingWinForms.ViaDarkUI
         public MainForm()
         {
             this.InitializeComponent();
+        }
+
+        private void 退出ToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
