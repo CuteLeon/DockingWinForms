@@ -44,29 +44,42 @@ namespace DockingWinForms.ViaDockPanelSuite
                 // 配置允许的停靠模式：Float=浮动，Dock=停靠，Document=文档
                 DockAreas = DockAreas.Float | DockAreas.DockLeft | DockAreas.DockRight | DockAreas.DockTop | DockAreas.DockBottom,
                 // 首次显示状态：Float=浮动，Dock=停靠，Document=文档，AutoHide=自动隐藏
-                ShowHint = DockState.DockLeft,
+                ShowHint = DockState.DockLeftAutoHide,
                 // 隐藏而不是关闭
                 HideOnClose = true,
                 // 标签页文本
                 TabText = "工具",
             };
 
-            // 是否浮动
+            // 获取或设置 是否浮动
             _ = form1.IsFloat;
-            // 是否隐藏
+            // 获取或设置 是否隐藏
             _ = form1.IsHidden;
-            // 是否受限
+            // 获取 是否受限
             _ = form1.IsRestrictedWindow;
 
-            // 配置菜单
-            form1.TabPageContextMenu = new ContextMenu();
-            form1.TabPageContextMenu.MenuItems.Add("TabPageContextMenu");
+            // 标签页菜单：TabPageContextMenuStrip 比 TabPageContextMenu 更加强大，且支持 DockPanel 主题
+            form1.TabPageContextMenuStrip = new ContextMenuStrip() { Width = 100 };
+            form1.TabPageContextMenuStrip.Items.Add("TabPageContextMenuStrip");
+
+            // 内容交互菜单
+            form1.ContextMenuStrip = new ContextMenuStrip();
+            form1.ContextMenuStrip.Items.Add("ContextMenuStrip");
 
             // 显示
             form1.Show(this.DemoDockPanel);
 
-            // 切换停靠状态
-            form1.DockState = DockState.DockLeftAutoHide;
+            // DockState 可以实时切换，但必须在 Show() 之后
+            form1.DockState = DockState.DockLeft;
+
+            // 使用 Pane 以使用同一个窗格
+            new DockForm1().Show(form1.Pane, null);
+
+            // 激活
+            form1.Activate();
+
+            // 使用 同一窗格 根据比例 垂直或水平 并列显示
+            new DockForm2().Show(form1.Pane, DockAlignment.Bottom, 0.4);
 
             // 添加多个文档
             Enumerable.Range(1, 10).ToList().ForEach(index =>
