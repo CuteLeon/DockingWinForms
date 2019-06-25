@@ -14,5 +14,10 @@ namespace DockingWinForms.ViaDarkUI
         {
             Application.Exit();
         }
+
+        private void 新建文档ToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
