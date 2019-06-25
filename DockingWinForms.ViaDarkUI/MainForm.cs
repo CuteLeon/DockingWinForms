@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using DarkUI.Controls;
 using DarkUI.Docking;
 using DarkUI.Forms;
 using DockingWinForms.ViaDarkUI.Docks;
@@ -43,6 +44,9 @@ namespace DockingWinForms.ViaDarkUI
             this.DemoDockPanel.AddContent(this.dock11);
             this.DemoDockPanel.AddContent(this.dock12);
             this.DemoDockPanel.AddContent(this.dock13);
+            this.dock13.Controls.Clear();
+            this.dock13.Padding = new Padding(30);
+            this.dock13.Controls.Add(new DarkButton() { Dock = DockStyle.Fill, Text = "Button" });
         }
 
         private void 退出ToolStripMenuItem_Click(object sender, System.EventArgs e)
