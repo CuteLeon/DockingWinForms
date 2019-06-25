@@ -4,9 +4,9 @@ using DarkUI.Docking;
 
 namespace DockingWinForms.ViaDarkUI.Docks
 {
-    public partial class Dock1 : DarkToolWindow
+    public partial class DockLeft : DarkToolWindow
     {
-        public Dock1()
+        public DockLeft()
         {
             this.InitializeComponent();
 

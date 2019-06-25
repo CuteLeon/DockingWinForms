@@ -7,9 +7,11 @@ namespace DockingWinForms.ViaDarkUI
 {
     public partial class MainForm : DarkForm
     {
-        Dock1 dock1 = new Dock1();
-        Dock1 dock2 = new Dock1();
-        Dock1 dock3 = new Dock1();
+        DockLeft dock1 = new DockLeft();
+        DockLeft dock2 = new DockLeft();
+        DockLeft dock3 = new DockLeft();
+        DockBottom dock4 = new DockBottom();
+        DockBottom dock5 = new DockBottom();
 
         public MainForm()
         {
@@ -22,6 +24,8 @@ namespace DockingWinForms.ViaDarkUI
             this.DemoDockPanel.AddContent(this.dock1);
             this.DemoDockPanel.AddContent(this.dock2);
             this.DemoDockPanel.AddContent(this.dock3);
+            this.DemoDockPanel.AddContent(this.dock4);
+            this.DemoDockPanel.AddContent(this.dock5);
         }
 
         private void 退出ToolStripMenuItem_Click(object sender, System.EventArgs e)

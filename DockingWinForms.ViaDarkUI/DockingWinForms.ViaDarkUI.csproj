@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Docks\Dock1.cs">
+    <Compile Include="Docks\DockBottom.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Docks\Dock1.Designer.cs">
-      <DependentUpon>Dock1.cs</DependentUpon>
+    <Compile Include="Docks\DockBottom.Designer.cs">
+      <DependentUpon>DockBottom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docks\DockLeft.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Docks\DockLeft.Designer.cs">
+      <DependentUpon>DockLeft.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -60,8 +66,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Docks\Dock1.resx">
-      <DependentUpon>Dock1.cs</DependentUpon>
+    <EmbeddedResource Include="Docks\DockBottom.resx">
+      <DependentUpon>DockBottom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docks\DockLeft.resx">
+      <DependentUpon>DockLeft.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
