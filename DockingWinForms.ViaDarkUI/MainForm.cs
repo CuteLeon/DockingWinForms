@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using DarkUI.Controls;
 using DarkUI.Docking;
@@ -27,6 +28,8 @@ namespace DockingWinForms.ViaDarkUI
         {
             this.InitializeComponent();
 
+            this.FormClosing += this.MainForm_FormClosing;
+
             // 实现停靠容器拖拽和拉伸
             Application.AddMessageFilter(this.DemoDockPanel.DockContentDragFilter);
             Application.AddMessageFilter(this.DemoDockPanel.DockResizeFilter);
@@ -51,6 +54,17 @@ namespace DockingWinForms.ViaDarkUI
             document.Controls.Add(button);
             button.MouseClick += this.Button_MouseClick;
             this.DemoDockPanel.AddContent(document);
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // 序列化储存到外部，以保存布局
+            // 需要给 Dock 控件设置 SerializationKey 属性
+            DockPanelState state = this.DemoDockPanel.GetDockPanelState();
+
+            // 使用字典维护 Dock 控件和序列化 Key 的关系，还原布局时，需要传入一个根据 Key， 返回对应 Dock 控件的委托；
+            var dictionary = new Dictionary<string, DarkDockContent>();
+            this.DemoDockPanel.RestoreDockPanelState(state, (key) => dictionary[key]);
         }
 
         private void Button_MouseClick(object sender, MouseEventArgs e)

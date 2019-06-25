@@ -52,6 +52,7 @@
             this.DefaultDockArea = DarkUI.Docking.DarkDockArea.Right;
             this.DockText = "Right";
             this.Name = "DockRight";
+            this.SerializationKey = "KeyRight";
             this.Size = new System.Drawing.Size(217, 206);
             this.ResumeLayout(false);
 
