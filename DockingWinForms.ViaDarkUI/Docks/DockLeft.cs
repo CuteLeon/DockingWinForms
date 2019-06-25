@@ -10,7 +10,6 @@ namespace DockingWinForms.ViaDarkUI.Docks
         {
             this.InitializeComponent();
 
-            // TODO: 必须赋值
             this.DockArea = DarkDockArea.Left;
             this.DefaultDockArea = DarkDockArea.Left;
 
