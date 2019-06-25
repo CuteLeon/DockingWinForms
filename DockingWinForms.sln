@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockingWinForms.ViaDarkUI", "DockingWinForms.ViaDarkUI\DockingWinForms.ViaDarkUI.csproj", "{67897005-D0AB-44A7-B422-A40B2356153C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockingWinForms.ViaDockPanelSuite", "DockingWinForms.ViaDockPanelSuite\DockingWinForms.ViaDockPanelSuite.csproj", "{9EE2A44D-2FD2-47D6-B6BB-8D3735F9CEC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{67897005-D0AB-44A7-B422-A40B2356153C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67897005-D0AB-44A7-B422-A40B2356153C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67897005-D0AB-44A7-B422-A40B2356153C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EE2A44D-2FD2-47D6-B6BB-8D3735F9CEC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EE2A44D-2FD2-47D6-B6BB-8D3735F9CEC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EE2A44D-2FD2-47D6-B6BB-8D3735F9CEC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EE2A44D-2FD2-47D6-B6BB-8D3735F9CEC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
