@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using DockingWinForms.ViaDockPanelSuite.Docks;
 using WeifenLuo.WinFormsUI.Docking;
@@ -20,10 +21,6 @@ namespace DockingWinForms.ViaDockPanelSuite
             this.DemoDockPanel.DocumentStyle = DocumentStyle.DockingMdi;
             // 文档标签按钮位置
             this.DemoDockPanel.DocumentTabStripLocation = DocumentTabStripLocation.Top;
-
-            // 保存和载入布局
-            // this.DemoDockPanel.SaveAsXml("");
-            // this.DemoDockPanel.LoadFromXml("", null);
 
             // 显示文档 Icon
             this.DemoDockPanel.ShowDocumentIcon = true;
@@ -110,6 +107,16 @@ namespace DockingWinForms.ViaDockPanelSuite
 
             // 使用自定义浮动窗口工厂
             this.DemoDockPanel.Theme.Extender.FloatWindowFactory = new CustomFloatWindowFactory();
+        }
+
+        private void ExportImport()
+        {
+            // 保存布局（使用 IDockContent.GetPersistString() 生成窗口对象的唯一标记）
+            this.DemoDockPanel.SaveAsXml("layout.xml");
+
+            // 加载布局（使用 DeserializeDockContent 委托解析 persist 寻找对应的窗口对象）
+            DeserializeDockContent deserialize = (persist) => new DockForm1();
+            this.DemoDockPanel.LoadFromXml("layout.xml", deserialize);
         }
     }
 }
