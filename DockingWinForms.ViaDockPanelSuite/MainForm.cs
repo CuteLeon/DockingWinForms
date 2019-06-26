@@ -1,11 +1,14 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Windows.Forms;
 using DockingWinForms.ViaDockPanelSuite.Docks;
 using WeifenLuo.WinFormsUI.Docking;
 
 namespace DockingWinForms.ViaDockPanelSuite
 {
+    /// <summary>
+    /// 主窗口
+    /// </summary>
+    /// <see cref="http://docs.dockpanelsuite.com/getting-started/index.html#"/>
     public partial class MainForm : Form
     {
         public MainForm()
