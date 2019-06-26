@@ -107,6 +107,12 @@ namespace DockingWinForms.ViaDockPanelSuite
 
             // 使用自定义浮动窗口工厂
             this.DemoDockPanel.Theme.Extender.FloatWindowFactory = new CustomFloatWindowFactory();
+
+            /* 将主题应用到 菜单栏、工具栏、状态栏
+            this.DemoDockPanel.Theme.ApplyTo(this.MainTopMenuStrip);
+            this.DemoDockPanel.Theme.ApplyTo(this.MainToolStrip);
+            this.DemoDockPanel.Theme.ApplyTo(this.MainStatusStrip);
+             */
         }
 
         private void ExportImport()
