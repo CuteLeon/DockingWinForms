@@ -78,8 +78,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Docks\DockDocument.resx">
+      <DependentUpon>DockDocument.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Docks\DockForm1.resx">
       <DependentUpon>DockForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docks\DockForm2.resx">
+      <DependentUpon>DockForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

@@ -33,6 +33,7 @@
             // 
             // DemoDockPanel
             // 
+            this.DemoDockPanel.BackColor = System.Drawing.Color.DimGray;
             this.DemoDockPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DemoDockPanel.Location = new System.Drawing.Point(0, 0);
             this.DemoDockPanel.Name = "DemoDockPanel";
