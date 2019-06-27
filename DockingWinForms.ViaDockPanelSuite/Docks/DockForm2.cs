@@ -9,6 +9,8 @@ namespace DockingWinForms.ViaDockPanelSuite.Docks
         {
             this.InitializeComponent();
 
+            this.DockHandler.AllowEndUserDocking = false;
+
             // 禁用关闭按钮
             this.CloseButton = false;
             // 隐藏关闭按钮
